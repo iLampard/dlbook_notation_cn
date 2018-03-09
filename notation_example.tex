@@ -3,20 +3,24 @@
 % Otherwise, will show a primarily grayscale version of the document for printing
 
 \input{settings.tex}
-
+ 
 \documentclass[11pt,oneside,a4paper]{book}
 \usepackage{natbib}
 \usepackage{breakcites} % Do Not let citations break out of the text frame
 \usepackage{microtype} % Get rid of some frame busts automatically
 % Note: if microtype causes error on ubuntu, run
 % sudo apt-get install cm-super
+
+%%%%%%% 设置中文字体 %%%%%%%%%%
+\usepackage[UTF8]{ctex}
+
 \title{Example Notation for Deep Learning}
-\author{Ian Goodfellow\\Yoshua Bengio\\Aaron Courville}
+\author{伊恩\\Yoshua Bengio\\Aaron Courville}
 \date{}
 \setcounter{tocdepth}{1}
-
-\pdfobjcompresslevel=0
-
+ 
+%\pdfobjcompresslevel=0
+ 
 \usepackage{zref-abspage}
 
 \setcounter{secnumdepth}{3} % Number subsubsections, because we reference them,
@@ -32,6 +36,7 @@
 \usepackage{subfigure}
 \usepackage[utf8]{inputenc}
 
+ 
 % Needed for some foreign characters
 \usepackage[T1]{fontenc}
 
@@ -108,9 +113,9 @@ colorlinks,
 bookmarks=false,
 plainpages=false]{hyperref}
 
-% Make \[ \] math have equation numbers
-\DeclareRobustCommand{\[}{\begin{equation}}
-\DeclareRobustCommand{\]}{\end{equation}}
+% Make \[ \] math have equation numbers - 添加了aligned， 方便公式多行对齐的操作
+\DeclareRobustCommand{\[}{\begin{equation}\begin{aligned}}
+\DeclareRobustCommand{\]}{\end{aligned}\end{equation}}
 
 % Allow align environments to cross page boundaries.
 % If we do not do this, we get weird gaps of several inches of white space
@@ -118,6 +123,9 @@ plainpages=false]{hyperref}
 \allowdisplaybreaks
 
 \begin{document}
+%%%%%% 缩小了字号和行间距，使得文字看起来更紧凑  %%%%%%%%
+\fontsize{10}{11}
+\selectfont  % change font size for chinese character
 
 \setlength{\parskip}{0.25 \baselineskip}
 \newlength{\figwidth}
