@@ -13,7 +13,17 @@ We developed these files while writing \citet{dlbook}.
 We release these files for anyone to use freely, in order to help
 establish some standard notation in the deep learning community.
 
+\section{二项逻辑回归模型}
 
+二项逻辑回归模型是如下的条件概率分布
+\[
+	P(Y=1| \vx)=& \frac{\exp(\vtheta^T \vx + b)}{1+\exp(\vtheta^T \vx + b)}\\
+	P(Y=0| \vx)=&\frac{1}{1+\exp(\vtheta^T \vx + b)}
+\label{def:logistic}\]
+
+\eqref{def:logistic}的含义将会在\secref{sec:examples}中说明，也可以参见 \citet{lihang2012StatLearningMethod}。
+
+   
 \section{Examples}
 \label{sec:examples}
 
@@ -99,6 +109,7 @@ Similarly, you can refer to different sections of the book using
 \section*{Acknowledgments}
 We thank Catherine Olsson and \'Ulfar Erlingsson for proofreading and
 review of this manuscript.
+
 
 
 \clearpage
