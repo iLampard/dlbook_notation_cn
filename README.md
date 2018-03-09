@@ -7,6 +7,7 @@
 - *notation.tex* 中增加了ctex包的引用，调整了字体大小以及行间距（比原版更紧凑一些）
 - *math_commands.tex* 中把章节、公式、算法等引用的返回值改成对应的中文，如“公式(1.1)， 算法2.3，第3章”等 
 
+作为示例，在*notation_example.tex*中添加了一个中文段落，*notation.bib*中添加了一行中文文献引用。效果见下文截屏。
 
 ## 如何编译
 
@@ -18,7 +19,11 @@
 
 
 ![](/png/title.png)
+
 ![](/png/content.png)
+
 ![](/png/section_logistic.png)
+
 ![](/png/figure.png)
+
 ![](/png/ref.png)
