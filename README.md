@@ -20,6 +20,8 @@
 
 ![](/png/title.png)
 
+![](/png/notation.png)
+
 ![](/png/content.png)
 
 ![](/png/section_logistic.png)
